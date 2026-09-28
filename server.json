@@ -27,8 +27,8 @@
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
       "com.telesherpa/skill": "https://codeberg.org/telesherpa/skill-telesherpa-com",
-      "com.telesherpa/skillVersion": "0.8.5",
-      "com.telesherpa/toolCount": 172,
+      "com.telesherpa/skillVersion": "0.8.8",
+      "com.telesherpa/toolCount": 170,
       "com.telesherpa/auth": "OAuth2 Bearer + Session-Rolle; Selbstregistrierung ohne Browser",
       "com.telesherpa/languages": [
         "de_DE",
@@ -38,7 +38,7 @@
       ],
       "com.telesherpa/healthCheck": "https://mcp.telesherpa.com/health",
       "com.telesherpa/dynamicClientRegistration": "RFC 7591 aktiv",
-      "com.telesherpa/toolVisibility": "169 mit Standard-Rolle, 172 im Katalog, 6 ohne Token"
+      "com.telesherpa/toolVisibility": "170 im Katalog, alle mit Token sichtbar; 6 ohne Token (register, activate, login, refresh_access_token, auth_status, onto_credit_pricing)"
     }
   }
 }

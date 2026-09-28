@@ -16,9 +16,8 @@ und Functions bilden Geschäftsprozesse ab, ohne Code zu schreiben.
 
 ## Was der Server kann
 
-Der Server stellt **172 Tools** bereit (169 mit Standardrolle sichtbar, 6 ohne Token;
-3 davon verlangen die Rolle `kpimember`). Ein KI-Agent kann sich **selbstständig
-registrieren, anmelden und arbeiten** — Zero-Touch-Onboarding ohne Browser.
+Der Server stellt **170 Tools** bereit (6 davon ohne Token). Ein KI-Agent kann sich
+**selbstständig registrieren, anmelden und arbeiten** — Zero-Touch-Onboarding ohne Browser.
 
 Weitere Einsatzfelder, die die Plattform abdeckt:
 
