@@ -1,0 +1,44 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.telesherpa/ontology-platform",
+  "title": "Telesherpa Ontology Platform",
+  "description": "Ontology platform for facility management (CAFM/IWMS) and field service via AI agents.",
+  "version": "2.0.2",
+  "websiteUrl": "https://www.telesherpa.com",
+  "repository": {
+    "url": "https://github.com/telesherpa/telesherpa-mcp",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://www.telesherpa.com/apple-touch-icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "180x180"
+      ]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.telesherpa.com/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "com.telesherpa/skill": "https://codeberg.org/telesherpa/skill-telesherpa-com",
+      "com.telesherpa/skillVersion": "0.8.5",
+      "com.telesherpa/toolCount": 172,
+      "com.telesherpa/auth": "OAuth2 Bearer + Session-Rolle; Selbstregistrierung ohne Browser",
+      "com.telesherpa/languages": [
+        "de_DE",
+        "en_US",
+        "fr_FR",
+        "it_IT"
+      ],
+      "com.telesherpa/healthCheck": "https://mcp.telesherpa.com/health",
+      "com.telesherpa/dynamicClientRegistration": "RFC 7591 aktiv",
+      "com.telesherpa/toolVisibility": "169 mit Standard-Rolle, 172 im Katalog, 6 ohne Token"
+    }
+  }
+}
