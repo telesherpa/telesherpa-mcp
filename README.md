@@ -16,10 +16,14 @@ und Functions bilden Geschäftsprozesse ab, ohne Code zu schreiben.
 
 ## Was der Server kann
 
-Der Server stellt **172 Tools** bereit. Die Sichtbarkeit hängt an der **Rolle**, nicht
-am Token: **6** Tools ohne Token, **105** mit der Rolle `telesherpa`, **110** mit der Rolle
-`admin`, **172** mit beiden Rollen. Ein KI-Agent kann sich **selbstständig registrieren,
+Der Server stellt **175 Tools** bereit. Die Sichtbarkeit hängt an der **Rolle**, nicht
+am Token: **6** Tools ohne Token, **108** mit der Rolle `member`, **111** mit der Rolle
+`admin`, **175** mit beiden Rollen. Ein KI-Agent kann sich **selbstständig registrieren,
 anmelden und arbeiten** — Zero-Touch-Onboarding ohne Browser.
+
+> Die Rolle hieß bis 2026-10-11 `telesherpa` und heißt seither `member` — gemeint ist dieselbe
+> Rolle. Die Agenten-Anleitung nennt die jeweils aktuellen Zahlen:
+> `codeberg.org/telesherpa/skill-telesherpa-com`.
 
 Weitere Einsatzfelder, die die Plattform abdeckt:
 
