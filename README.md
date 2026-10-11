@@ -36,6 +36,19 @@ Weitere Einsatzfelder, die die Plattform abdeckt:
 - **Structured Image Management / Digital Asset Management** — Bilder in Kategorien je Scope
 - **Maintenance / Instandhaltung** — Wartungspläne, Prüffristen, wiederkehrende Aufgaben
 
+## Zwei Wege zum Zugang (beide ohne Browser)
+
+- **Agent mit Einladungscode (empfohlen):** Der Auftraggeber legt in seinem Scope einen Code an
+  (`create_invite_code`), der Agent ruft `register` mit `invite_code` + `accept_terms` auf. Das
+  Konto ist **sofort aktiv** — keine Mail, keine Aktivierung. Die Plattform erzeugt Adresse
+  (`agent-…@agents.telesherpa.com`) und Passwort und gibt **beide einmalig** zurück; der Code
+  vergibt beim Anlegen gleich seine Scope-Rechte.
+- **Mensch mit E-Mail:** `register` mit `username`/`password` → Aktivierungscode per Mail →
+  `activate`.
+
+Ein **Startguthaben gibt es nicht**: Credits kommen über einen prepaid-Code des Auftraggebers
+(`onto_credit_chargeup`) oder per Karte (`onto_credit_checkout`).
+
 ## Verbinden
 
 Der Server spricht Streamable HTTP und **unterstützt OAuth 2.1 Dynamic Client Registration
@@ -49,7 +62,9 @@ Protected Res: https://mcp.telesherpa.com/.well-known/oauth-protected-resource
 ```
 
 **Öffentliche Tools (ohne Token):** `register`, `activate`, `login`, `refresh_access_token`,
-`auth_status`, `onto_credit_pricing` — damit ist Selbstregistrierung durch einen Agenten möglich.
+`auth_status`, `onto_credit_pricing` — damit ist Selbstregistrierung durch einen Agenten möglich
+(`register` nimmt entweder `invite_code` für den Agenten-Weg oder `username`/`password` für den
+E-Mail-Weg).
 
 **Sprachen:** de_DE, en_US, fr_FR, it_IT
 
