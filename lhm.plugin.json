@@ -1,0 +1,21 @@
+{
+  "identifier": "telesherpa-ontology-platform",
+  "name": "Telesherpa Ontology Platform",
+  "version": "2.3.0",
+  "author": "Telesherpa GmbH",
+  "authorUrl": "https://github.com/telesherpa",
+  "category": "productivity",
+  "cloudEndpoint": "https://mcp.telesherpa.com/mcp",
+  "description": "Ontology platform for facility management (CAFM/IWMS) and field service. Object types, relations, forms, rules and functions model business processes and are operable by AI agents. Remote MCP server with OAuth 2.1 and dynamic client registration.",
+  "homepage": "https://www.telesherpa.com",
+  "icon": "https://www.telesherpa.com/apple-touch-icon.png",
+  "tags": [
+    "facility-management",
+    "cafm",
+    "field-service",
+    "ontology",
+    "erp",
+    "crm",
+    "remote"
+  ]
+}
