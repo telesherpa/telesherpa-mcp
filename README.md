@@ -16,9 +16,9 @@ und Functions bilden Geschäftsprozesse ab, ohne Code zu schreiben.
 
 ## Was der Server kann
 
-Der Server stellt **175 Tools** bereit. Die Sichtbarkeit hängt an der **Rolle**, nicht
-am Token: **6** Tools ohne Token, **108** mit der Rolle `member`, **111** mit der Rolle
-`admin`, **175** mit beiden Rollen. Ein KI-Agent kann sich **selbstständig registrieren,
+Der Server stellt **177 Tools** bereit. Die Sichtbarkeit hängt an der **Rolle**, nicht
+am Token: **6** Tools ohne Token, **110** mit der Rolle `member`, **177** mit der Rolle
+`admin`, **177** mit beiden Rollen. Ein KI-Agent kann sich **selbstständig registrieren,
 anmelden und arbeiten** — Zero-Touch-Onboarding ohne Browser.
 
 > Die Rolle hieß bis 2026-10-11 `telesherpa` und heißt seither `member` — gemeint ist dieselbe
