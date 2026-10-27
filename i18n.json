@@ -1,0 +1,44 @@
+[
+  {
+    "locale": "de-DE",
+    "name": "Telesherpa Ontologie-Plattform",
+    "description": "Ontologie-Plattform für Facility Management (CAFM/IWMS) und Field Service. Objekttypen, Beziehungen, Formulare, Regeln und Funktionen bilden Geschäftsprozesse ab und sind für KI-Agenten bedienbar. Remote-MCP-Server mit OAuth 2.1 und dynamischer Client-Registrierung.",
+    "tags": [
+      "facility-management",
+      "cafm",
+      "field-service",
+      "ontologie",
+      "erp",
+      "crm",
+      "remote"
+    ]
+  },
+  {
+    "locale": "fr-FR",
+    "name": "Plateforme ontologique Telesherpa",
+    "description": "Plateforme ontologique pour la gestion immobilière (CAFM/IWMS/GMAO) et le service terrain. Types d'objets, relations, formulaires, règles et fonctions modélisent les processus métier et sont exploitables par des agents IA. Serveur MCP distant avec OAuth 2.1 et enregistrement dynamique des clients.",
+    "tags": [
+      "gestion-immobiliere",
+      "cafm",
+      "service-terrain",
+      "ontologie",
+      "erp",
+      "crm",
+      "distant"
+    ]
+  },
+  {
+    "locale": "it-IT",
+    "name": "Piattaforma ontologica Telesherpa",
+    "description": "Piattaforma ontologica per la gestione immobiliare (CAFM/IWMS) e il servizio sul campo. Tipi di oggetto, relazioni, moduli, regole e funzioni modellano i processi aziendali e sono utilizzabili dagli agenti IA. Server MCP remoto con OAuth 2.1 e registrazione dinamica dei client.",
+    "tags": [
+      "gestione-immobiliare",
+      "cafm",
+      "servizio-sul-campo",
+      "ontologia",
+      "erp",
+      "crm",
+      "remoto"
+    ]
+  }
+]
