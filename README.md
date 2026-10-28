@@ -18,9 +18,9 @@ processes without writing code.
 
 ## What the server does
 
-The server exposes **177 tools**. Visibility depends on the **role**, not on the token:
-**6** tools without a token, **110** with the `member` role, **177** with the `admin` role,
-**177** with both roles together. An AI agent can **register, sign in and start working on its
+The server exposes **179 tools**. Visibility depends on the **role**, not on the token:
+**6** tools without a token, **113** with the `member` role, **179** with the `admin` role,
+**179** with both roles together. An AI agent can **register, sign in and start working on its
 own** — zero-touch onboarding, no browser involved.
 
 > The role was called `telesherpa` until 2026-10-11 and has been called `member` since — same
