@@ -3,7 +3,7 @@
   "name": "com.telesherpa/ontology-platform",
   "title": "Telesherpa Ontology Platform",
   "description": "Ontology platform for field service: AI agents observe, connect and act on business objects.",
-  "version": "2.2.4",
+  "version": "2.3.0",
   "websiteUrl": "https://www.telesherpa.com",
   "repository": {
     "url": "https://github.com/telesherpa/telesherpa-mcp",
@@ -27,9 +27,9 @@
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
       "com.telesherpa/skill": "https://codeberg.org/telesherpa/skill-telesherpa-com",
-      "com.telesherpa/skillVersion": "1.4.3",
-      "com.telesherpa/toolCount": 175,
-      "com.telesherpa/auth": "OAuth2 Bearer + Session-Rolle; Selbstregistrierung ohne Browser",
+      "com.telesherpa/skillVersion": "1.7.1",
+      "com.telesherpa/toolCount": 177,
+      "com.telesherpa/auth": "OAuth2 bearer + session role; self-registration without a browser",
       "com.telesherpa/languages": [
         "de_DE",
         "en_US",
@@ -37,9 +37,9 @@
         "it_IT"
       ],
       "com.telesherpa/healthCheck": "https://mcp.telesherpa.com/health",
-      "com.telesherpa/dynamicClientRegistration": "RFC 7591 aktiv",
-      "com.telesherpa/toolDescriptions": "Alle Tools mit Beschreibung + MCP-Annotations (readOnly/destructive/idempotent/openWorld)",
-      "com.telesherpa/toolVisibility": "175 im Katalog; 6 ohne Token (register, activate, login, refresh_access_token, auth_status, onto_credit_pricing); 108 mit der Rolle member, 111 mit der Rolle admin, 175 mit beiden Rollen"
+      "com.telesherpa/dynamicClientRegistration": "RFC 7591 enabled",
+      "com.telesherpa/toolDescriptions": "Every tool carries a description and MCP annotations (readOnly/destructive/idempotent/openWorld)",
+      "com.telesherpa/toolVisibility": "177 in the catalogue; 6 without a token (register, activate, login, refresh_access_token, auth_status, onto_credit_pricing), 110 with the member role, 177 with the admin role"
     }
   }
 }
