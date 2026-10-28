@@ -1,59 +1,61 @@
 # Telesherpa Ontology Platform — MCP Server
 
-**Telesherpa ist eine Ontologie-Plattform (Knowledge-Graph-Plattform) für Facility Management
-(CAFM/IWMS, Gebäudemanagement, Corporate Real Estate Management) und Field Service.** Sie ist
-zugleich als leichtgewichtiges, No-Code-ERP/CRM nutzbar: Objekttypen, Formulare, Regeln (Trigger)
-und Functions bilden Geschäftsprozesse ab, ohne Code zu schreiben.
+**Telesherpa is an ontology platform (knowledge-graph platform) for facility management
+(CAFM/IWMS, building management, corporate real estate) and field service.** It doubles as a
+lightweight, no-code ERP/CRM: object types, forms, rules (triggers) and functions model business
+processes without writing code.
 
-**MCP-Endpoint:** `https://mcp.telesherpa.com/mcp` (Streamable HTTP, OAuth 2.1)
+**MCP endpoint:** `https://mcp.telesherpa.com/mcp` (Streamable HTTP, OAuth 2.1)
 **Website:** https://www.telesherpa.com
-**Health:** https://mcp.telesherpa.com/health (ohne Token)
-**Dokumentation / Agent-Skill:** https://codeberg.org/telesherpa/skill-telesherpa-com
+**Health:** https://mcp.telesherpa.com/health (no token required)
+**Documentation / agent skill:** https://codeberg.org/telesherpa/skill-telesherpa-com
 
-> Dieses Repository ist der **Öffentlichkeits-Träger für die Verzeichnisse** (Glama, offizielle
-> MCP-Registry). Der Quellcode des Servers liegt nicht öffentlich. Inhalt und Pflege des
-> Agent-Skills liegen auf Codeberg — dieses Repository verweist darauf.
+> English is the primary language of this repository. Deutsche Fassung: [README.de.md](README.de.md).
 
-## Was der Server kann
+> This repository is the **public carrier for directory listings** (Glama, the official MCP
+> registry, and others). The server source code is not public. The agent skill is written and
+> maintained on Codeberg — this repository points to it.
 
-Der Server stellt **177 Tools** bereit. Die Sichtbarkeit hängt an der **Rolle**, nicht
-am Token: **6** Tools ohne Token, **110** mit der Rolle `member`, **177** mit der Rolle
-`admin`, **177** mit beiden Rollen. Ein KI-Agent kann sich **selbstständig registrieren,
-anmelden und arbeiten** — Zero-Touch-Onboarding ohne Browser.
+## What the server does
 
-> Die Rolle hieß bis 2026-10-11 `telesherpa` und heißt seither `member` — gemeint ist dieselbe
-> Rolle. Die Agenten-Anleitung nennt die jeweils aktuellen Zahlen:
+The server exposes **177 tools**. Visibility depends on the **role**, not on the token:
+**6** tools without a token, **110** with the `member` role, **177** with the `admin` role,
+**177** with both roles together. An AI agent can **register, sign in and start working on its
+own** — zero-touch onboarding, no browser involved.
+
+> The role was called `telesherpa` until 2026-10-11 and has been called `member` since — same
+> role. The agent guide always states the current numbers:
 > `codeberg.org/telesherpa/skill-telesherpa-com`.
 
-Weitere Einsatzfelder, die die Plattform abdeckt:
+Further use cases the platform covers:
 
-- **Fleet-/Flottenmanagement** — Fahrzeuge, Fahrer, Prüffristen (HU, UVV), Wartungshistorie
-- **Field Service Management / Service Dispatch** — Aufträge, Einsätze, Materialverbrauch
-- **CRM** — Personen, Firmen, Kontakte, Beziehungen zwischen Objekten
-- **Workflow-Automation / Business Process Platform** — Regeln, Trigger, zeitgesteuerte Funktionen
-- **Multi-Tenant SaaS / Self-Provisioning** — Scopes je Firma, Rechte, eingebautes Credit- und
-  Abrechnungssystem, Selbstregistrierung ohne Browser
-- **Structured Image Management / Digital Asset Management** — Bilder in Kategorien je Scope
-- **Maintenance / Instandhaltung** — Wartungspläne, Prüffristen, wiederkehrende Aufgaben
+- **Fleet management** — vehicles, drivers, inspection intervals (roadworthiness, UVV), service history
+- **Field service management / service dispatch** — work orders, assignments, material consumption
+- **CRM** — people, companies, contacts, relations between objects
+- **Workflow automation / business process platform** — rules, triggers, scheduled functions
+- **Multi-tenant SaaS / self-provisioning** — one scope per company, permissions, built-in credit
+  and billing system, self-registration without a browser
+- **Structured image management / digital asset management** — images in categories per scope
+- **Maintenance** — maintenance plans, inspection intervals, recurring tasks
 
-## Zwei Wege zum Zugang (beide ohne Browser)
+## Two ways in (both without a browser)
 
-- **Agent mit Einladungscode (empfohlen):** Der Auftraggeber legt in seinem Scope einen Code an
-  (`create_invite_code`), der Agent ruft `register` mit `invite_code` + `accept_terms` auf. Das
-  Konto ist **sofort aktiv** — keine Mail, keine Aktivierung. Die Plattform erzeugt Adresse
-  (`agent-…@agents.telesherpa.com`) und Passwort und gibt **beide einmalig** zurück; der Code
-  vergibt beim Anlegen gleich seine Scope-Rechte.
-- **Mensch mit E-Mail:** `register` mit `username`/`password` → Aktivierungscode per Mail →
+- **Agent with an invite code (recommended):** the principal creates a code in their scope
+  (`create_invite_code`), the agent calls `register` with `invite_code` + `accept_terms`. The
+  account is **active immediately** — no email, no activation step. The platform generates the
+  address (`agent-…@agents.telesherpa.com`) and a password and returns **both exactly once**;
+  the code grants its scope permissions at the same time.
+- **Human with email:** `register` with `username`/`password` → activation code by email →
   `activate`.
 
-Ein **Startguthaben gibt es nicht**: Credits kommen über einen prepaid-Code des Auftraggebers
-(`onto_credit_chargeup`) oder per Karte (`onto_credit_checkout`).
+There is **no starting credit**: credits come either from a prepaid code issued by the principal
+(`onto_credit_chargeup`) or by card (`onto_credit_checkout`).
 
-## Verbinden
+## Connecting
 
-Der Server spricht Streamable HTTP und **unterstützt OAuth 2.1 Dynamic Client Registration
-(RFC 7591)**. Clients wie Claude, Cursor und andere MCP-Clients registrieren sich selbst —
-es muss keine Client-ID verteilt werden.
+The server speaks Streamable HTTP and **supports OAuth 2.1 Dynamic Client Registration
+(RFC 7591)**. Clients such as Claude, Cursor and other MCP clients register themselves — no
+client ID has to be handed out.
 
 ```
 Endpoint:      https://mcp.telesherpa.com/mcp
@@ -61,19 +63,18 @@ Discovery:     https://mcp.telesherpa.com/.well-known/oauth-authorization-server
 Protected Res: https://mcp.telesherpa.com/.well-known/oauth-protected-resource
 ```
 
-**Öffentliche Tools (ohne Token):** `register`, `activate`, `login`, `refresh_access_token`,
-`auth_status`, `onto_credit_pricing` — damit ist Selbstregistrierung durch einen Agenten möglich
-(`register` nimmt entweder `invite_code` für den Agenten-Weg oder `username`/`password` für den
-E-Mail-Weg).
+**Public tools (no token):** `register`, `activate`, `login`, `refresh_access_token`,
+`auth_status`, `onto_credit_pricing` — these make agent self-registration possible (`register`
+accepts either `invite_code` for the agent path or `username`/`password` for the email path).
 
-**Sprachen:** de_DE, en_US, fr_FR, it_IT
+**Languages:** de_DE, en_US, fr_FR, it_IT
 
-## Betriebshinweis
+## Operational note
 
-`POST /mcp` ohne Token antwortet bewusst mit **401** — das ist der Auslöser für die
-OAuth-Discovery der Clients. `GET /health` antwortet ohne Token mit 200.
+`POST /mcp` without a token deliberately answers **401** — that is what triggers OAuth discovery
+in clients. `GET /health` answers 200 without a token.
 
-## Lizenz
+## License
 
-MIT — siehe `LICENSE`. Dieses Repository enthält nur Metadaten und Dokumentation;
-die Lizenz bezieht sich darauf.
+MIT — see `LICENSE`. This repository contains metadata and documentation only; the license
+applies to that.
