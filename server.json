@@ -28,7 +28,7 @@
     "io.modelcontextprotocol.registry/publisher-provided": {
       "com.telesherpa/skill": "https://codeberg.org/telesherpa/skill-telesherpa-com",
       "com.telesherpa/skillVersion": "1.7.2",
-      "com.telesherpa/toolCount": 177,
+      "com.telesherpa/toolCount": 179,
       "com.telesherpa/auth": "OAuth2 bearer + session role; self-registration without a browser",
       "com.telesherpa/languages": [
         "de_DE",
@@ -39,7 +39,7 @@
       "com.telesherpa/healthCheck": "https://mcp.telesherpa.com/health",
       "com.telesherpa/dynamicClientRegistration": "RFC 7591 enabled",
       "com.telesherpa/toolDescriptions": "Every tool carries a description and MCP annotations (readOnly/destructive/idempotent/openWorld)",
-      "com.telesherpa/toolVisibility": "177 in the catalogue; 6 without a token (register, activate, login, refresh_access_token, auth_status, onto_credit_pricing), 110 with the member role, 177 with the admin role"
+      "com.telesherpa/toolVisibility": "179 in the catalogue; 6 without a token (register, activate, login, refresh_access_token, auth_status, onto_credit_pricing), 113 with the member role, 179 with the admin role"
     }
   }
 }
