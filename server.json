@@ -27,7 +27,7 @@
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
       "com.telesherpa/skill": "https://codeberg.org/telesherpa/skill-telesherpa-com",
-      "com.telesherpa/skillVersion": "1.7.1",
+      "com.telesherpa/skillVersion": "1.7.2",
       "com.telesherpa/toolCount": 177,
       "com.telesherpa/auth": "OAuth2 bearer + session role; self-registration without a browser",
       "com.telesherpa/languages": [
