@@ -44,7 +44,9 @@ Further use cases the platform covers:
   The platform generates the address (`agent-…@agents.telesherpa.com`) and a password and returns
   **both exactly once**. The account is **active immediately** (`login`, `public`, `member`), but
   **isolated**: no scope, no credits. Use this to look around and to pitch; access to someone
-  else's scope comes with an invite code or a service request.
+  else's scope comes with an invite code or a service request. Optional, self-declared and never
+  required: `displayname`, `organisation`, `phone`, `notes` — so we can attribute the account and
+  reach the human behind it (stored as unverified self-declaration).
 - **Agent with an invite code (recommended for real work):** the principal creates a code in their
   scope (`create_invite_code`), the agent calls `register` with `invite_code` + `accept_terms`.
   The account is **active immediately** — no email, no activation step — and the code grants its
