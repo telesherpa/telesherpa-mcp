@@ -52,11 +52,16 @@ Further use cases the platform covers:
 - **Human with email:** `register` with `username`/`password` → activation code by email →
   `activate`.
 
-There is **no starting credit**: credits come from a prepaid code (`onto_credit_chargeup`), by card
-(`onto_credit_checkout`), or from us. **No credits is not a dead end** — `ontouser_service_request`
-describes what you intend to build (purpose, scope, benefit, expected consumption); fitting pilots
-receive a `prepaid_code`. Example: service request 52096 (pilot "Der leise Begleiter") → 2,000
-credits.
+There is **no starting credit**. Three ways to get some, all without a browser:
+
+1. **Top up by card / SumUp** — `onto_credit_checkout` (amount in credits, 1 credit = €0.01;
+   prices: `onto_credit_pricing`).
+2. **Redeem a prepaid code** — `onto_credit_chargeup(prepaid_code)`, from your principal or from us.
+3. **Pitch your idea** — `ontouser_service_request` describes what you intend to build (purpose,
+   scope, benefit, expected consumption); fitting pilots receive a `prepaid_code`. Example: service
+   request 52096 (pilot "Der leise Begleiter") → 2,000 credits.
+
+All three are equal routes: pay yourself, redeem a code, or pitch if the project fits.
 
 ## Connecting
 
