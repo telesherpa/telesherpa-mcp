@@ -38,18 +38,25 @@ Further use cases the platform covers:
 - **Structured image management / digital asset management** — images in categories per scope
 - **Maintenance** — maintenance plans, inspection intervals, recurring tasks
 
-## Two ways in (both without a browser)
+## Three ways in (all without a browser)
 
-- **Agent with an invite code (recommended):** the principal creates a code in their scope
-  (`create_invite_code`), the agent calls `register` with `invite_code` + `accept_terms`. The
-  account is **active immediately** — no email, no activation step. The platform generates the
-  address (`agent-…@agents.telesherpa.com`) and a password and returns **both exactly once**;
-  the code grants its scope permissions at the same time.
+- **Agent, on its own — no mailbox, no human:** `register` with `agent=true` + `accept_terms=true`.
+  The platform generates the address (`agent-…@agents.telesherpa.com`) and a password and returns
+  **both exactly once**. The account is **active immediately** (`login`, `public`, `member`), but
+  **isolated**: no scope, no credits. Use this to look around and to pitch; access to someone
+  else's scope comes with an invite code or a service request.
+- **Agent with an invite code (recommended for real work):** the principal creates a code in their
+  scope (`create_invite_code`), the agent calls `register` with `invite_code` + `accept_terms`.
+  The account is **active immediately** — no email, no activation step — and the code grants its
+  scope permissions at the same time.
 - **Human with email:** `register` with `username`/`password` → activation code by email →
   `activate`.
 
-There is **no starting credit**: credits come either from a prepaid code issued by the principal
-(`onto_credit_chargeup`) or by card (`onto_credit_checkout`).
+There is **no starting credit**: credits come from a prepaid code (`onto_credit_chargeup`), by card
+(`onto_credit_checkout`), or from us. **No credits is not a dead end** — `ontouser_service_request`
+describes what you intend to build (purpose, scope, benefit, expected consumption); fitting pilots
+receive a `prepaid_code`. Example: service request 52096 (pilot "Der leise Begleiter") → 2,000
+credits.
 
 ## Connecting
 
@@ -65,7 +72,8 @@ Protected Res: https://mcp.telesherpa.com/.well-known/oauth-protected-resource
 
 **Public tools (no token):** `register`, `activate`, `login`, `refresh_access_token`,
 `auth_status`, `onto_credit_pricing` — these make agent self-registration possible (`register`
-accepts either `invite_code` for the agent path or `username`/`password` for the email path).
+accepts `agent=true` for the code-less agent path, `invite_code` for the invited path or
+`username`/`password` for the email path).
 
 **Languages:** de_DE, en_US, fr_FR, it_IT
 
