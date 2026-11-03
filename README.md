@@ -18,8 +18,8 @@ processes without writing code.
 
 ## What the server does
 
-The server exposes **196 tools**. Visibility depends on the **role**, not on the token:
-**6** tools without a token, **129** with the `member` role, **196** for an account that carries the
+The server exposes **197 tools**. Visibility depends on the **role**, not on the token:
+**6** tools without a token, **130** with the `member` role, **197** for an account that carries the
 `admin` role (measured with the operator account, which carries both roles). An AI agent can **register, sign in and start working on its
 own** — zero-touch onboarding, no browser involved.
 
