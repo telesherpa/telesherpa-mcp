@@ -18,8 +18,8 @@ und Functions bilden Geschäftsprozesse ab, ohne Code zu schreiben.
 
 ## Was der Server kann
 
-Der Server stellt **177 Tools** bereit. Die Sichtbarkeit hängt an der **Rolle**, nicht
-am Token: **6** Tools ohne Token, **110** mit der Rolle `member`, **177** mit der Rolle
+Der Server stellt **201 Tools** bereit. Die Sichtbarkeit hängt an der **Rolle**, nicht
+am Token: **6** Tools ohne Token, **137** mit der Rolle `member`, **201** mit der Rolle
 `admin`, **177** mit beiden Rollen. Ein KI-Agent kann sich **selbstständig registrieren,
 anmelden und arbeiten** — Zero-Touch-Onboarding ohne Browser.
 
