@@ -3,7 +3,7 @@
   "name": "com.telesherpa/ontology-platform",
   "title": "Telesherpa Ontology Platform",
   "description": "Ontology platform for field service: AI agents observe, connect and act on business objects.",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "websiteUrl": "https://www.telesherpa.com",
   "repository": {
     "url": "https://github.com/telesherpa/telesherpa-mcp",
@@ -39,7 +39,7 @@
       "com.telesherpa/healthCheck": "https://mcp.telesherpa.com/health",
       "com.telesherpa/dynamicClientRegistration": "RFC 7591 enabled",
       "com.telesherpa/toolDescriptions": "Every tool carries a description and MCP annotations (readOnly/destructive/idempotent/openWorld)",
-      "com.telesherpa/toolVisibility": "202 in the catalogue; 6 callable by name without a token (register, activate, login, refresh_access_token, auth_status, onto_credit_pricing); the rest are role-filtered per account, 202 for an admin account"
+      "com.telesherpa/toolVisibility": "202 tools in the catalogue, and the catalogue itself (tools/list) is readable without a token; 6 tools are callable without a token (register, activate, login, refresh_access_token, auth_status, onto_credit_pricing); every other tool call requires sign-in and is role-filtered per account, 202 for an admin account"
     }
   }
 }
