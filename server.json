@@ -3,7 +3,7 @@
   "name": "com.telesherpa/ontology-platform",
   "title": "Telesherpa Ontology Platform",
   "description": "Ontology platform for field service: AI agents observe, connect and act on business objects.",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "websiteUrl": "https://www.telesherpa.com",
   "repository": {
     "url": "https://github.com/telesherpa/telesherpa-mcp",
