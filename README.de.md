@@ -18,11 +18,13 @@ und Functions bilden Geschäftsprozesse ab, ohne Code zu schreiben.
 
 ## Was der Server kann
 
-Die Sichtbarkeit hängt an der **Rolle**, nicht am Token: sechs Werkzeuge funktionieren ohne
-Token, ein Konto mit der Rolle `member` sieht die Werkzeuge seiner Rolle, ein Konto mit
-`admin` sieht den vollen Katalog. Die Zahlen stehen bewusst nicht hier — sie ändern sich
-mit jeder Auslieferung und werden vom Server selbst veröffentlicht (`tools/list`,
-`/health`). Ein KI-Agent kann sich **selbstständig registrieren, anmelden und arbeiten**
+**Aufrufen** darf man je nach **Rolle** unterschiedlich viel: sechs Werkzeuge funktionieren ohne
+Token, ein Konto mit der Rolle `member` darf die Werkzeuge seiner Rolle aufrufen, ein Konto mit
+`admin` den vollen Katalog. **Den Katalog lesen** geht ebenfalls ohne Token, aber nur auf
+ausdrückliche Anfrage: `initialize` antwortet 200, danach liefert `tools/list` mit
+`x-telesherpa-preview: 1` alles; ein nacktes `tools/list` antwortet 401. Die Zahlen stehen
+bewusst nicht hier — sie ändern sich mit jeder Auslieferung und werden vom Server selbst
+veröffentlicht (`/health`, `tools/list`). Ein KI-Agent kann sich **selbstständig registrieren, anmelden und arbeiten**
 — Zero-Touch-Onboarding ohne Browser.
 
 > Die Rolle hieß bis 2026-10-11 `telesherpa` und heißt seither `member` — gemeint ist dieselbe
