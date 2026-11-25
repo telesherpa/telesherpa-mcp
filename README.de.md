@@ -26,7 +26,8 @@ mit jeder Auslieferung und werden vom Server selbst veröffentlicht (`tools/list
 — Zero-Touch-Onboarding ohne Browser.
 
 > Die Rolle hieß bis 2026-10-11 `telesherpa` und heißt seither `member` — gemeint ist dieselbe
-> Rolle. Die Agenten-Anleitung nennt die jeweils aktuellen Zahlen:
+> Rolle. Die Agenten-Anleitung schreibt **keine** festen Zahlen hinein; sie verweist auf
+> `auth_status` und `/health`, die sie live nennen:
 > `github.com/telesherpa/skill-telesherpa-com`.
 
 Weitere Einsatzfelder, die die Plattform abdeckt:

@@ -18,16 +18,18 @@ processes without writing code.
 
 ## What the server does
 
-Visibility depends on the **role**, not on the token: six tools work without a token, a
-`member` account sees the tools of its role, an `admin` account sees the full catalogue.
-The current numbers are deliberately not repeated here — they change with every release
-and are published by the server itself (`tools/list`, `/health`). An AI agent can
+**What you may call** depends on the **role**: six tools work without a token, a `member`
+account may call the tools of its role, an `admin` account the full catalogue. **Reading the
+catalogue** needs no token either, but an explicit request: `initialize` answers 200, then
+`tools/list` with `x-telesherpa-preview: 1` returns everything; a bare `tools/list` answers 401.
+The current numbers are deliberately not repeated here — they change with every release and
+are published by the server itself (`/health`, `tools/list`). An AI agent can
 **register, sign in and start working on its own** — zero-touch onboarding, no browser
 involved.
 
 > The role was called `telesherpa` until 2026-10-11 and has been called `member` since — same
-> role. The agent guide always states the current numbers:
-> `github.com/telesherpa/skill-telesherpa-com`.
+> role. The agent guide does **not** hard-code numbers; it points at `auth_status` and
+> `/health`, which report them live: `github.com/telesherpa/skill-telesherpa-com`.
 
 Further use cases the platform covers:
 
