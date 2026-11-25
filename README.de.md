@@ -10,22 +10,24 @@ und Functions bilden Geschäftsprozesse ab, ohne Code zu schreiben.
 **MCP-Endpoint:** `https://mcp.telesherpa.com/mcp` (Streamable HTTP, OAuth 2.1)
 **Website:** https://www.telesherpa.com
 **Health:** https://mcp.telesherpa.com/health (ohne Token)
-**Dokumentation / Agent-Skill:** https://codeberg.org/telesherpa/skill-telesherpa-com
+**Dokumentation / Agent-Skill:** https://github.com/telesherpa/skill-telesherpa-com
 
 > Dieses Repository ist der **Öffentlichkeits-Träger für die Verzeichnisse** (Glama, offizielle
 > MCP-Registry). Der Quellcode des Servers liegt nicht öffentlich. Inhalt und Pflege des
-> Agent-Skills liegen auf Codeberg — dieses Repository verweist darauf.
+> Agent-Skills liegen auf GitHub — dieses Repository verweist darauf.
 
 ## Was der Server kann
 
-Der Server stellt **201 Tools** bereit. Die Sichtbarkeit hängt an der **Rolle**, nicht
-am Token: **6** Tools ohne Token, **137** mit der Rolle `member`, **201** mit der Rolle
-`admin`, **177** mit beiden Rollen. Ein KI-Agent kann sich **selbstständig registrieren,
-anmelden und arbeiten** — Zero-Touch-Onboarding ohne Browser.
+Die Sichtbarkeit hängt an der **Rolle**, nicht am Token: sechs Werkzeuge funktionieren ohne
+Token, ein Konto mit der Rolle `member` sieht die Werkzeuge seiner Rolle, ein Konto mit
+`admin` sieht den vollen Katalog. Die Zahlen stehen bewusst nicht hier — sie ändern sich
+mit jeder Auslieferung und werden vom Server selbst veröffentlicht (`tools/list`,
+`/health`). Ein KI-Agent kann sich **selbstständig registrieren, anmelden und arbeiten**
+— Zero-Touch-Onboarding ohne Browser.
 
 > Die Rolle hieß bis 2026-10-11 `telesherpa` und heißt seither `member` — gemeint ist dieselbe
 > Rolle. Die Agenten-Anleitung nennt die jeweils aktuellen Zahlen:
-> `codeberg.org/telesherpa/skill-telesherpa-com`.
+> `github.com/telesherpa/skill-telesherpa-com`.
 
 Weitere Einsatzfelder, die die Plattform abdeckt:
 

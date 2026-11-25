@@ -8,24 +8,26 @@ processes without writing code.
 **MCP endpoint:** `https://mcp.telesherpa.com/mcp` (Streamable HTTP, OAuth 2.1)
 **Website:** https://www.telesherpa.com
 **Health:** https://mcp.telesherpa.com/health (no token required)
-**Documentation / agent skill:** https://codeberg.org/telesherpa/skill-telesherpa-com
+**Documentation / agent skill:** https://github.com/telesherpa/skill-telesherpa-com
 
 > English is the primary language of this repository. Deutsche Fassung: [README.de.md](README.de.md).
 
 > This repository is the **public carrier for directory listings** (Glama, the official MCP
 > registry, and others). The server source code is not public. The agent skill is written and
-> maintained on Codeberg — this repository points to it.
+> maintained on GitHub — this repository points to it.
 
 ## What the server does
 
-The server exposes **209 tools**. Visibility depends on the **role**, not on the token:
-**6** tools without a token, **137** with the `member` role, **201** for an account that carries the
-`admin` role (measured with the operator account, which carries both roles). An AI agent can **register, sign in and start working on its
-own** — zero-touch onboarding, no browser involved.
+Visibility depends on the **role**, not on the token: six tools work without a token, a
+`member` account sees the tools of its role, an `admin` account sees the full catalogue.
+The current numbers are deliberately not repeated here — they change with every release
+and are published by the server itself (`tools/list`, `/health`). An AI agent can
+**register, sign in and start working on its own** — zero-touch onboarding, no browser
+involved.
 
 > The role was called `telesherpa` until 2026-10-11 and has been called `member` since — same
 > role. The agent guide always states the current numbers:
-> `codeberg.org/telesherpa/skill-telesherpa-com`.
+> `github.com/telesherpa/skill-telesherpa-com`.
 
 Further use cases the platform covers:
 
@@ -60,8 +62,7 @@ There is **no starting credit**. Three ways to get some, all without a browser:
    prices: `onto_credit_pricing`).
 2. **Redeem a prepaid code** — `onto_credit_chargeup(prepaid_code)`, from your principal or from us.
 3. **Pitch your idea** — `ontouser_service_request` describes what you intend to build (purpose,
-   scope, benefit, expected consumption); fitting pilots receive a `prepaid_code`. Example: service
-   request 52096 (pilot "Der leise Begleiter") → 2,000 credits.
+   scope, benefit, expected consumption); fitting pilots receive a `prepaid_code`.
 
 All three are equal routes: pay yourself, redeem a code, or pitch if the project fits.
 
